@@ -1,0 +1,10 @@
+<h1>All Cuties</h1>
+
+<ul>
+  <% @cuties.each do |cutie| %>
+    <li>
+      <%= image_tag(cutie.cutie_pic, class: "index_pic") %>
+      <%= link_to cutie.name, cuty_path(cutie)%><br>
+    </li>
+  <% end %>
+</ul>
