@@ -12,6 +12,17 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
+
+ ul {
+  list-style: none;
+ }
+
+ .index-pic {
+   width: 200px
+ }
+
+ .show-pic {
+   width: 400px
+ }

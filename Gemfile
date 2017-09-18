@@ -35,7 +35,6 @@ group :development, :test do
   gem 'shoulda'
   gem 'valid_attribute'
   gem 'faker'
-  gem 'dotenv-rails'
   gem "database_cleaner"
 end
 
