@@ -14,15 +14,3 @@
  *= require_self
 
  */
-
- ul {
-  list-style: none;
- }
-
- .index-pic {
-   width: 200px
- }
-
- .show-pic {
-   width: 400px
- }

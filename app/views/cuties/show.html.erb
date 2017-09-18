@@ -1,7 +1,22 @@
-<h1><%= @cutie.name %></h1>
+<div class="container">
 
-<%= image_tag(@cutie.cutie_pic, class: "show-pic") %><br>
-Bio: <%= @cutie.bio  %><br>
-Type: <%= @cutie.cutie_type  %><br>
-Species: <%= @cutie.species  %><br>
-Birth Date: <%= @cutie.birthdate  %><br>
+<h1>Meet <%= @cutie.name %></h1>
+  <div class="row">
+    <div class="photo-area five columns">
+      <%= image_tag(@cutie.cutie_pic, class: "show-pic") %><br>
+    </div>
+    <div class="stats seven columns">
+      Bio: <%= @cutie.bio  %><br>
+      Type: <%= @cutie.cutie_type  %><br>
+      Species: <%= @cutie.species  %><br>
+      Birth Date: <%= @cutie.birthdate  %><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="activity">
+      Recent Activity:
+    </div>
+
+  </div>
+
+</div>
