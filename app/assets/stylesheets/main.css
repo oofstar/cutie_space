@@ -7,6 +7,11 @@ body {
   color: white
 }
 
+input {
+  width: 200px;
+  color: black
+}
+
 nav {
   background-color: #f9be02;
   border-bottom: 5px solid grey;
