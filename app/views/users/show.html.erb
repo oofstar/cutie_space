@@ -1,22 +1,22 @@
 <div class="container">
+  <h1><%= @user.username %></h1>
+  <% if @user.team_name %>
+    <h1><%= @user.team_name %></h1>
+  <% else %>
+    <p>Name your cutie crew?</p>
+  <% end %>
 
-<h1><%= @user.username %></h1>
-<% if @user.team_name %>
-  <h1><%= @user.team_name %></h1>
-<% else %>
-  <p>Name your cutie crew?</p>
-<% end %>
+  <h2>Your Crew</h2>
+  <%= link_to "Add A Cutie To Your Crew", new_cuty_path %>
+    <ul>
+      <% @cuties.each do |cutie| %>
+        <li>
+          <div class="square-container">
+            <%= image_tag(cutie.cutie_pic, class: "square-pic") %>
+          </div><br>
+          <%= cutie.name %>
 
-<h2>Your Crew</h2>
-  <ul>
-    <% @cuties.each do |cutie| %>
-      <li>
-        <div class="square-container">
-          <%= image_tag(cutie.cutie_pic, class: "square-pic") %>
-        </div><br>
-        <%= cutie.name %>
-
-      </li>
-    <% end %>
-  </ul>
+        </li>
+      <% end %>
+    </ul>
 </div>
