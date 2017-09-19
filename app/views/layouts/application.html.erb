@@ -12,8 +12,11 @@
   </head>
 
   <body>
-    <nav>
-      <div class=logo>Cutie Space</div>
+    <nav class="row">
+      <div class="logo one-half column">Cutie Space</div>
+      <ul class="one-half column">
+        <li><%= link_to 'Sign Up', 'new_user_registration_path' %></li>
+      </ul>
     </nav>
 
     <%= yield %>
