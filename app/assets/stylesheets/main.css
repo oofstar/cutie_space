@@ -8,8 +8,13 @@ body {
 }
 
 input {
+  background-color: #f3eedc;
   width: 200px;
   color: black
+}
+
+input[type="file"] {
+  width: 400px
 }
 
 nav {
@@ -17,6 +22,11 @@ nav {
   border-bottom: 5px solid grey;
   width: 100%;
   height: 125px
+}
+
+select {
+  color: black;
+  background-color: #f3eedc;
 }
 
 ul {
