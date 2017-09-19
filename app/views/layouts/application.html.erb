@@ -12,9 +12,22 @@
   </head>
 
   <body>
-    <nav>
-      <div class=logo>Cutie Space</div>
+    <nav class="row">
+      <div class="logo one-half column">Cutie Space</div>
+      <ul class="one-half column">
+
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+
     </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>

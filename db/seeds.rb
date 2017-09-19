@@ -9,6 +9,9 @@
 User.create(
   username: "oofstar",
   team_name: "Firth Street Cutie Crew",
+  first_name: "Al",
+  last_name: "Fair",
+  email: "geek.sheek@gmail.com",
   password: "password",
 )
 
@@ -19,12 +22,12 @@ Cuty.create(
   cutie_type: "Softie",
   species: "Polar Bear",
   birthdate: 19851008,
-  user_id: User.first.id
+  user_id: User.last.id
 )
 
 4.times do
   Post.create(
     body: Faker::Lovecraft.paragraph,
-    cuty_id: Cuty.first.id
+    cuty_id: Cuty.last.id
   )
 end
