@@ -1,11 +1,12 @@
 class CutiesController < ApplicationController
 
   def index
-    @cuties = Cutie.all
+    @cuties = Cuty.all
   end
 
   def show
-    @cutie = Cutie.find(params[:id])
+    @cutie = Cuty.find(params[:id])
+    @posts = @cutie.posts
   end
 
 end

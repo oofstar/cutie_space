@@ -12,7 +12,7 @@ User.create(
   password: "password",
 )
 
-Cutie.create(
+Cuty.create(
   name: "Alox",
   cutie_pic: "http://oofindustries.net/images/aloxpic.jpg",
   bio: "Alox is a well known QTV personality and the mastermind behind the concept of Spoon Therapy.",
@@ -21,3 +21,10 @@ Cutie.create(
   birthdate: 19851008,
   user_id: User.first.id
 )
+
+4.times do
+  Post.create(
+    body: Faker::Lovecraft.paragraph,
+    cuty_id: Cuty.first.id
+  )
+end

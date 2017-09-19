@@ -4,6 +4,9 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :username, null: false
       t.string :team_name
       t.string :password, null: false
+
+      t.timestamps null: false
+
     end
   end
 end
