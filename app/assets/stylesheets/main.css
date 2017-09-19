@@ -37,6 +37,17 @@ ul {
   width: 400px
 }
 
+.square-container {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.square-pic {
+  height: 200px;
+  overflow: hidden;
+}
+
 .logo {
   color: white;
   font-size: 125px;
