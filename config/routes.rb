@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'cuties#index'
 
   resources :cuties
-
+  resources :users, only: [:index, :show]
 end
