@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(*)
-    @current_user_path
+    if !user_signed_in?
+      root_path
+    else
+      current_user
+    end
   end
 
 end

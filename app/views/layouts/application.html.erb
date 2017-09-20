@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title)%></title>
+    <title>Cutie Space</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,10 +13,11 @@
 
   <body>
     <nav class="row">
-      <div class="logo one-half column">Cutie Space</div>
+      <div class="logo one-half column"><%= link_to "Cutie Space", cuties_path %></div>
       <ul class="one-half column">
 
         <% if user_signed_in? %>
+          
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
@@ -25,9 +26,10 @@
       </ul>
 
     </nav>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>

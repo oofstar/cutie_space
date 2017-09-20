@@ -20,13 +20,14 @@
 
 .byebug_history
 /public/uploads/*
-
+/public/uploads
 /node_modules
 /app/assets/javascripts/bundle.js
 /react/coverage
 
 # Ignore environment variables
 .env
+.coveralls.yml
 *.sqlite3
 
 .env
