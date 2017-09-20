@@ -17,7 +17,6 @@ class CutiesController < ApplicationController
   def create
     @cutie = Cuty.new(cuty_params)
     @cutie.user = current_user
-    binding.pry
     if @cutie.save
       redirect_to @cutie, notice: "Cutie Successfully Added!"
     else
