@@ -11,14 +11,13 @@ class CutiesController < ApplicationController
   end
 
   def new
-    @user = @current_user
     @cutie = Cuty.new
   end
 
   def create
-    @cutie =Cuty.new(cuty_params)
+    @cutie = Cuty.new(cuty_params)
     @cutie.user = current_user
-
+    binding.pry
     if @cutie.save
       redirect_to @cutie, notice: "Cutie Successfully Added!"
     else
@@ -30,7 +29,7 @@ class CutiesController < ApplicationController
   private
 
   def cuty_params
-    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic)
+    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic, :user_id)
   end
 
 end

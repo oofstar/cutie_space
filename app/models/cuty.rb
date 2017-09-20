@@ -5,4 +5,5 @@ class Cuty < ApplicationRecord
   has_many :posts
 
   validates :name, presence: true
+  validates :cutie_pic, presence: true
 end
