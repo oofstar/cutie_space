@@ -3,7 +3,7 @@
     <h1>Add A Cutie</h1>
 
     <%= form_for @cutie do |f| %>
-      <div class="six columns"
+      <div class="six columns">
         <%= f.label :name %>
         <%= f.text_field :name %><br>
 
@@ -17,14 +17,18 @@
         <%= f.text_field :species %><br>
 
         <%= f.label :birthdate %>
-        <%= f.date_select(:birthdate, start_year: 1900, include_blank: true) %><br>
+        <%= f.date_select(:birthdate, start_year: Date.current.year, end_year: 1900, include_blank: true) %><br>
       </div>
 
       <div class="six-columns">
         <%= f.label :cutie_pic, 'Cutie Pic' %>
         <%= f.file_field :cutie_pic %>
       </div>
-    <% end %>
-
   </div>
+
+  <div class="row">
+        <%= f.submit "Add Cutie" %>
+      <% end %>
+  </div>
+
 </div>

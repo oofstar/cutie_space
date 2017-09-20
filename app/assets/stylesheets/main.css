@@ -61,5 +61,8 @@ ul {
 .logo {
   color: white;
   font-size: 125px;
+}
 
+.logo a {
+  text-decoration: none;
 }
