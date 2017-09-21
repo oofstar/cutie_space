@@ -15,7 +15,7 @@ input {
 }
 
 input[type="file"] {
-  width: 400px;
+  width: 300px;
 }
 
 nav {
@@ -35,6 +35,10 @@ ul {
  list-style: none;
 }
 
+.activity {
+  margin-top: 75px;
+}
+
 .activity li {
   border: 3px solid grey;
   margin: 10px;
@@ -47,22 +51,23 @@ ul {
   border: 3px solid grey;
   height: 250px;
   width: 250px;
+  margin: 10px;
+  padding-top: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.form-box  {
+  text-align: center;
+  /*width: 90%;*/
+  /*border: 3px solid black;*/
+  margin-bottom: 20px;
+
 }
 
 .index-pic {
-  width: 200px;
-  margin: 20px;
-}
-
-.nav-links {
-  /*border: 3px solid black;*/
-  text-align: right;
-  padding-right: 5%;
-}
-
-.nav-links li {
-  display: inline;
-  margin: 1.5%;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .logo {
@@ -76,8 +81,24 @@ ul {
   text-decoration: none;
 }
 
+.nav-links {
+  /*border: 3px solid black;*/
+  text-align: right;
+  padding-right: 5%;
+}
+
+.nav-links li {
+  display: inline-flex;
+  margin: 4px;
+}
+
+.photo-area {
+  text-align: center;
+}
+
 .show-pic {
   width: 400px;
+  margin-bottom: 20px;
 }
 
 .square-container {
@@ -89,4 +110,20 @@ ul {
 .square-pic {
   height: 200px;
   overflow: hidden;
+}
+
+.team-header {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }

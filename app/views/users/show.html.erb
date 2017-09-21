@@ -1,21 +1,26 @@
 <div class="container">
-  <h1><%= @user.username %></h1>
-  <% if @user.team_name %>
-    <h1><%= @user.team_name %></h1>
-  <% else %>
-    <p>Name your cutie crew?</p>
-  <% end %>
 
-  <h2>Your Crew</h2>
-  <%= link_to "Add A Cutie To Your Crew", new_cuty_path %>
-    <ul>
+  <div class="row team-header">
+    <% if @user.team_name %>
+      <h2><%= @user.team_name %></h2>
+    <% else %>
+      <h2><%= @user.username %>'s Crew</h2>
+    <% end %>
+  </div>
+
+    <ul class="row">
       <% @cuties.each do |cutie| %>
-        <li>
-          <div class="square-container">
-            <%= image_tag(cutie.cutie_pic, class: "square-pic") %>
-          </div><br>
-          <%= cutie.name %>
+        <%=link_to cuty_path(cutie) do %>
+          <li class="cutie-box">
+              <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+              <%= cutie.name %><br>
+          </li>
+        <% end %>
+      <% end %>
 
+      <%= link_to new_cuty_path do %>
+        <li class="cutie-box">
+          <h1>+<p>Add A Cutie<p></h1>
         </li>
       <% end %>
     </ul>

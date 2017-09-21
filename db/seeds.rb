@@ -22,7 +22,7 @@ users.each do |user|
     Cuty.create(
       name: Faker::Lovecraft.deity,
       cutie_pic: Rails.root.join('spec', 'support', 'images', 'photo.jpg' ).open,
-      bio: "Faker::Lovecraft.paragraph",
+      bio: Faker::Lovecraft.paragraph,
       cutie_type: ["Softie", "Hard Guy", "Action Figure"].sample,
       species: Faker::HitchhikersGuideToTheGalaxy.specie,
       birthdate: Faker::Date.birthday(18, 65),
