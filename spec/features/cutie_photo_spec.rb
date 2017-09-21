@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "cutie photo" do
+feature "cutie photo", pending: true do
   scenario "user uploads a cutie photo" do
     user = FactoryGirl.create(:user)
 
