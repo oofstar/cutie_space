@@ -42,6 +42,7 @@ ul {
 
 .cutie-box {
   text-align: center;
+  border: 3px solid black;
   height: 250px;
   width: 250px;
 }
