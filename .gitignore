@@ -27,7 +27,6 @@
 
 # Ignore environment variables
 .env
-.coveralls.yml
 *.sqlite3
 
 .env

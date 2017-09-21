@@ -3,10 +3,12 @@
 
   <ul>
     <% @cuties.each do |cutie| %>
-      <li>
-        <%= image_tag(cutie.cutie_pic, class: "index-pic") %>
-        <%= link_to cutie.name, cuty_path(cutie)%><br>
+    <a href= cutie_path >
+      <li class="cutie-box">
+          <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+          <%= cutie.name %>
       </li>
+    </a>
     <% end %>
   </ul>
 </div>

@@ -15,6 +15,7 @@ class CutiesController < ApplicationController
   end
 
   def create
+    
     @cutie = Cuty.new(cuty_params)
     @cutie.user = current_user
     if @cutie.save
@@ -28,7 +29,7 @@ class CutiesController < ApplicationController
   private
 
   def cuty_params
-    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic, :user_id)
+    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic)
   end
 
 end
