@@ -9,7 +9,7 @@
       Bio: <%= @cutie.bio  %><br>
       Type: <%= @cutie.cutie_type  %><br>
       Species: <%= @cutie.species  %><br>
-      Birth Date: <%= @cutie.birthdate  %><br>
+      Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %><br>
     </div>
   </div>
   <div class="row">
@@ -19,7 +19,7 @@
       <ul>
         <% @posts.each do |post| %>
           <li>
-            <%= post.body %> 
+            <%= post.body %>
           </li>
         <% end %>
       </ul>
