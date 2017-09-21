@@ -1,5 +1,6 @@
 a {
-  color: white
+  color: white;
+  text-decoration: none;
 }
 
 body {
@@ -10,18 +11,18 @@ body {
 input {
   background-color: #f3eedc;
   width: 200px;
-  color: black
+  color: black;
 }
 
 input[type="file"] {
-  width: 400px
+  width: 400px;
 }
 
 nav {
   background-color: #ffca3a;
   border-bottom: 5px solid grey;
   width: 100%;
-  height: 125px
+  height: 125px;
 }
 
 select {
@@ -39,12 +40,18 @@ ul {
   padding: 5px;
 }
 
+.cutie-box {
+  text-align: center;
+  height: 250px;
+  width: 250px;
+}
+
 .index-pic {
-  width: 200px
+  width: 200px;
 }
 
 .show-pic {
-  width: 400px
+  width: 400px;
 }
 
 .square-container {
