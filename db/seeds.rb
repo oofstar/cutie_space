@@ -5,29 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do
+  User.create(
+    username: Faker::Internet.user_name,
+    team_name: Faker::Space.agency,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "password"
+  )
+end
 
-# User.create(
-#   username: "oofstar",
-#   team_name: "Firth Street Cutie Crew",
-#   first_name: "Al",
-#   last_name: "Fair",
-#   email: "geek.sheek@gmail.com",
-#   password: "password",
-# )
-#
-# Cuty.create(
-#   name: "Alox",
-#   cutie_pic: "http://oofindustries.net/images/aloxpic.jpg",
-#   bio: "Alox is a well known QTV personality and the mastermind behind the concept of Spoon Therapy.",
-#   cutie_type: "Softie",
-#   species: "Polar Bear",
-#   birthdate: 19851008,
-#   user_id: User.last.id
-# )
-#
-# 4.times do
-#   Post.create(
-#     body: Faker::Lovecraft.paragraph,
-#     cuty_id: Cuty.last.id
-#   )
-# end
+users = User.all
+users.each do |user|
+  3.times do
+    Cuty.create(
+      name: Faker::Lovecraft.deity,
+      cutie_pic: Rails.root.join('spec', 'support', 'images', 'photo.jpg' ).open,
+      bio: "Faker::Lovecraft.paragraph",
+      cutie_type: ["Softie", "Hard Guy", "Action Figure"].sample,
+      species: Faker::HitchhikersGuideToTheGalaxy.specie,
+      birthdate: Faker::Date.birthday(18, 65),
+      user: user
+    )
+  end
+end
+
+cuties = Cuty.all
+
+cuties.each do |cutie|
+  4.times do
+    Post.create(
+      body: Faker::Lovecraft.paragraph,
+      cuty: cutie
+    )
+  end
+end
