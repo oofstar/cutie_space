@@ -9,7 +9,7 @@ body {
 }
 
 input {
-  background-color: #f3eedc;
+  background-color: white;
   width: 200px;
   color: black;
 }
@@ -27,7 +27,7 @@ nav {
 
 select {
   color: black;
-  background-color: #f3eedc;
+  background-color: white;
 }
 
 ul {
@@ -41,13 +41,16 @@ ul {
 }
 
 .cutie-box {
+  background-color: #ffca3a;
   text-align: center;
+  border: 3px solid grey;
   height: 250px;
   width: 250px;
 }
 
 .index-pic {
   width: 200px;
+  margin: 20px;
 }
 
 .show-pic {
