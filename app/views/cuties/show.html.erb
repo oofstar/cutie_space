@@ -2,15 +2,29 @@
 
   <div class="row">
     <div class="photo-area six columns">
-      <h1>Meet <%= @cutie.name %></h1>
-        <%= image_tag(@cutie.cutie_pic, class: "show-pic") %><br>
+      <h1>Meet <%= @cutie.name %></h1><br>
+      <%= image_tag(@cutie.cutie_pic, class: "show-pic") %>
+      <% if @cutie.user == current_user %>
+        <p><%=link_to "Edit This Cutie", edit_cuty_path(@cutie) %></p>
+      <% end %>
         <div class="text-left">
-          Bio: <%= @cutie.bio  %><br>
-          Type: <%= @cutie.cutie_type  %><br>
-          Species: <%= @cutie.species  %><br>
+
+          <% if @cutie.bio != "" %>
+            Bio: <%= @cutie.bio  %><br>
+          <% end %>
+
+          <% if @cutie.cutie_type != "" %>
+            Type: <%= @cutie.cutie_type  %><br>
+          <% end %>
+
+          <% if @cutie.species != "" %>
+            Species: <%= @cutie.species  %><br>
+          <% end %>
+
           <% if @cutie.birthdate %>
             Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %>
           <% end %>
+
         </div>
     </div>
 

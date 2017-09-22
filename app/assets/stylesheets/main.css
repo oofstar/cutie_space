@@ -8,6 +8,10 @@ body {
   color: white
 }
 
+h1 {
+  margin-bottom: 0;
+}
+  
 input {
   background-color: white;
   width: 200px;

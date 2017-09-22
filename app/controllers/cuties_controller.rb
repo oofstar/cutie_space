@@ -27,6 +27,25 @@ class CutiesController < ApplicationController
     end
   end
 
+  def edit
+    @cutie = Cuty.find(params[:id])
+  end
+
+  def update
+    @cutie = Cuty.find(params[:id])
+    if current_user == @cutie.user
+      if @cutie.update(cuty_params)
+        redirect_to @cutie, notice: "Cutie Successfully Updated!"
+      else
+        flash[:notice] = @cutie.errors.full_messages.join(', ')
+        render action: 'edit'
+      end
+    else
+      flash[:notice] = "Invalid user. You didn't create this!"
+      render action: 'edit'
+    end
+  end
+
   private
 
   def cuty_params
