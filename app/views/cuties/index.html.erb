@@ -6,7 +6,15 @@
       <%=link_to cuty_path(cutie) do %>
         <li class="cutie-box">
             <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
-            <%= cutie.name %>
+            <%= cutie.name %><br>
+
+            <% if !cutie.user.team_name.nil? %>
+              <%= cutie.user.team_name %>
+            <% else %>
+              <br>
+            <% end %>
+
+
         </li>
       <% end %>
     <% end %>
