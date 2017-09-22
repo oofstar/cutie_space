@@ -18,6 +18,13 @@ input[type="file"] {
   width: 300px;
 }
 
+textarea {
+  border: 3px solid grey;
+  margin: 10px;
+  padding: 5px;
+  color: black;
+}
+
 nav {
   background-color: #ffca3a;
   border-bottom: 5px solid grey;
@@ -43,6 +50,8 @@ ul {
   border: 3px solid grey;
   margin: 10px;
   padding: 5px;
+  list-style: none;
+
 }
 
 .cutie-box {
@@ -78,7 +87,6 @@ ul {
 }
 
 .logo a {
-  font
   text-decoration: none;
 }
 
@@ -89,7 +97,7 @@ ul {
 }
 
 .nav-links li {
-  display: inline-flex;
+  display: inline;
   margin: 4px;
 }
 

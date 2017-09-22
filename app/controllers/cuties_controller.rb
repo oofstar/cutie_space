@@ -7,7 +7,8 @@ class CutiesController < ApplicationController
 
   def show
     @cutie = Cuty.find(params[:id])
-    @posts = @cutie.posts
+    @posts = @cutie.posts.order(created_at: :desc)
+    @new_post = Post.new
   end
 
   def new
@@ -15,7 +16,7 @@ class CutiesController < ApplicationController
   end
 
   def create
-    
+    binding.pry
     @cutie = Cuty.new(cuty_params)
     @cutie.user = current_user
     if @cutie.save
