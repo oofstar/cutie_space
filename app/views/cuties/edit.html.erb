@@ -22,7 +22,9 @@
         <div class="text-left five columns">
           <%= f.label :cutie_pic, 'Cutie Pic' %>
           <%= f.file_field :cutie_pic %><br>
-          <%= image_tag(@cutie.cutie_pic, class: "index-pic") %>
+          <div class="text-center">
+            <%= image_tag(@cutie.cutie_pic, class: "index-pic") %>
+          </div>
         </div>
     </div>
 

@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :cuties do
     resources :posts
   end
-  
+
   resources :users, only: [:index, :show]
 end

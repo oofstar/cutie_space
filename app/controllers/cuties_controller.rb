@@ -46,6 +46,12 @@ class CutiesController < ApplicationController
     end
   end
 
+  def destroy
+    @cutie = Cuty.find(params[:id])
+    @cutie.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def cuty_params

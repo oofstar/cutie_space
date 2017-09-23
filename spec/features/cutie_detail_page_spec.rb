@@ -12,7 +12,6 @@ feature 'user sees details page', %Q{
   # * visiting the page for an individual cutie displays their status updates
   # * status updates display sorted by most recent first
 
-
   scenario 'user visits individual cutie page and sees details about cutie' do
     cuty_1 = FactoryGirl.create(:cuty)
 
@@ -24,8 +23,6 @@ feature 'user sees details page', %Q{
     expect(page).to have_content("Species: #{cuty_1.species}")
 
   end
-
-
 
   scenario 'user sees status updates with more recent first' do
     cuty_1 = FactoryGirl.create(:cuty)

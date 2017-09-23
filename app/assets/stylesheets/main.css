@@ -8,14 +8,26 @@ body {
   color: white
 }
 
+button {
+  width: 200px;
+  margin: 3px;
+}
+
+button a {
+  color: black;
+}
+
+
 h1 {
   margin-bottom: 0;
 }
-  
+
 input {
   background-color: white;
   width: 200px;
   color: black;
+  margin-bottom: 20px;
+
 }
 
 input[type="file"] {
@@ -58,6 +70,24 @@ ul {
 
 }
 
+.crew-box {
+  background-color: #ffca3a;
+  height: 50px;
+  border: 3px solid grey;
+  margin: 10px;
+  padding: 10px;
+}
+
+.crew-pic {
+  height: 50px;
+}
+
+.placeholder {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+}
+
 .cutie-box {
   background-color: #ffca3a;
   text-align: center;
@@ -85,7 +115,7 @@ ul {
 
 .logo {
   color: white;
-  font-size: 125px;
+  font-size: 100px;
   /*border: 3px solid black;*/
   padding-left: 5%;
 }

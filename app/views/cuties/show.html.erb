@@ -4,9 +4,6 @@
     <div class="photo-area six columns">
       <h1>Meet <%= @cutie.name %></h1><br>
       <%= image_tag(@cutie.cutie_pic, class: "show-pic") %>
-      <% if @cutie.user == current_user %>
-        <p><%=link_to "Edit This Cutie", edit_cuty_path(@cutie) %></p>
-      <% end %>
         <div class="text-left">
 
           <% if @cutie.bio != "" %>
