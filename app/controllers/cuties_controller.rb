@@ -16,7 +16,6 @@ class CutiesController < ApplicationController
   end
 
   def create
-    binding.pry
     @cutie = Cuty.new(cuty_params)
     @cutie.user = current_user
     if @cutie.save

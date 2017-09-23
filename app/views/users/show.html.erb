@@ -1,12 +1,20 @@
 <div class="container">
 
   <div class="row team-header">
-    <% if @user.team_name %>
-      <h2><%= @user.team_name %></h2>
-    <% else %>
-      <h2><%= @user.username %>'s Crew</h2>
-    <% end %>
+
+    <div class="two columns">
+      Hi, <%= @user.username %>!<br>
+      <%= link_to "Edit Your Profile", edit_registration_path(current_user) %>
+    </div>
+
+
   </div>
+
+  <!-- <% if @user.team_name %>
+    <h2><%= @user.team_name %></h2>
+  <% else %>
+    <h2><%= @user.username %>'s Crew</h2>
+  <% end %> -->
 
   <ul>
     <% @cuties.each do |cutie| %>
@@ -16,8 +24,7 @@
         </span>
 
         <span class="three columns">
-          <%= cutie.name %><br>
-          <%= cutie.created_at %>
+          <%= button_to "Visit #{cutie.name}", cuty_path(cutie), method: :get %>
         </span>
 
         <span class="three columns">

@@ -27,6 +27,8 @@ input {
   width: 200px;
   color: black;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 
 }
 
@@ -49,6 +51,11 @@ nav {
   height: 125px;
 }
 
+p {
+  font-size: 20px;
+  margin: 10px;
+}
+
 select {
   color: black;
   background-color: white;
@@ -67,7 +74,10 @@ ul {
   margin: 10px;
   padding: 5px;
   list-style: none;
+}
 
+.btn {
+  margin-bottom: 0;
 }
 
 .crew-box {
@@ -98,6 +108,14 @@ ul {
   padding-top: 10px;
   display: inline-block;
   overflow: hidden;
+}
+
+.edit-box {
+  text-align: right;
+  border: 3px solid grey;
+  margin: 10px;
+  /*height: 250px;*/
+  padding: 0;
 }
 
 .form-box  {
@@ -156,7 +174,6 @@ ul {
 }
 
 .team-header {
-  text-align: center;
 }
 
 .text-left {

@@ -39,16 +39,13 @@
 
 
 
-        <br>Recent Activity:
-
-        <!-- <ul> -->
-          <% @posts.each do |post| %>
-            <li>
-              <%= post.body %>
-            </li>
-          <% end %>
-        <!-- </ul> -->
-
+        <br>
+        Recent Activity:
+        <% @posts.each do |post| %>
+          <li>
+            <%= post.body %>
+          </li>
+        <% end %>
       </div>
     </div>
 
