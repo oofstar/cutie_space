@@ -1,11 +1,7 @@
 require 'rails_helper'
 
-cuty_1 = FactoryGirl.create(:cuty)
-post_1 = FactoryGirl.create(:post, cuty: cuty_1)
-post_2 = FactoryGirl.create(:post, cuty: cuty_1)
-post_3 = FactoryGirl.create(:post, cuty: cuty_1)
 
-feature 'user signs up', %Q{
+feature 'user sees details page', %Q{
   As a visitor
   I want to be able to click on a cutie’s photo
   So I can see details about them
@@ -18,6 +14,8 @@ feature 'user signs up', %Q{
 
 
   scenario 'user visits individual cutie page and sees details about cutie' do
+    cuty_1 = FactoryGirl.create(:cuty)
+
     visit cuty_path(cuty_1)
 
     expect(page).to have_content("Meet #{cuty_1.name}")
@@ -30,6 +28,11 @@ feature 'user signs up', %Q{
 
 
   scenario 'user sees status updates with more recent first' do
+    cuty_1 = FactoryGirl.create(:cuty)
+    post_1 = FactoryGirl.create(:post, cuty: cuty_1)
+    post_2 = FactoryGirl.create(:post, cuty: cuty_1)
+    post_3 = FactoryGirl.create(:post, cuty: cuty_1)
+
     visit cuty_path(cuty_1)
 
     expect(page).to have_content(post_3.body)
