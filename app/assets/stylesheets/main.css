@@ -1,14 +1,15 @@
 a {
-  color: white;
+  color: #220901;
   text-decoration: none;
 }
 
 body {
-  background-color: #a6d8dd;
-  color: white
+  background-color: #f3eedc;
+  color: #220901
 }
 
 button {
+  background-color: #877387;
   width: 200px;
   margin: 3px;
 }
@@ -26,8 +27,13 @@ input[type="checkbox"] {
   width: inherit;
 }
 
+input[type="submit"] {
+  background-color: #220901;
+  color: #f3eedc;
+}
+
 input {
-  background-color: white;
+  background-color: #f3eedc;
   width: 200px;
   color: black;
   margin-bottom: 20px;
@@ -47,8 +53,8 @@ textarea {
 }
 
 nav {
-  background-color: #ffca3a;
-  border-bottom: 5px solid grey;
+  background-color: #220901;
+  border-bottom: 5px solid #5B3F5A;
   display: block;
   width: 100%;
   height: 125px;
@@ -61,7 +67,7 @@ p {
 
 select {
   color: black;
-  background-color: white;
+  background-color: #f3eedc;
 }
 
 ul {
@@ -87,13 +93,14 @@ ul {
 }
 
 .btn {
+  color: #220901;
   margin-bottom: 0;
 }
 
 .crew-box {
-  background-color: #ffca3a;
+  background-color: #f3eedc;
   height: 50px;
-  border: 3px solid grey;
+  border: 3px solid #5B3F5A;
   margin: 10px;
   padding: 10px;
 }
@@ -105,13 +112,13 @@ ul {
 .placeholder {
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color: #f3eedc;
 }
 
 .cutie-box {
-  background-color: #ffca3a;
+  background-color: #f3eedc;
   text-align: center;
-  border: 3px solid grey;
+  border: 3px solid #5B3F5A;
   height: 250px;
   width: 250px;
   margin: 10px;
@@ -145,13 +152,14 @@ ul {
 }
 
 .logo {
-  color: white;
+  color: #f3eedc;
   font-size: 100px;
   /*border: 3px solid black;*/
   padding-left: 5%;
 }
 
 .logo a {
+  color: #f3eedc;
   text-decoration: none;
 }
 
@@ -159,8 +167,11 @@ ul {
   /*border: 3px solid black;*/
   text-align: right;
   padding-right: 5%;
+  color: #f3eedc;
 }
-
+.nav-links a {
+  color: #f3eedc;
+}
 .nav-links li {
   margin: 4px;
 }
