@@ -2,28 +2,50 @@
 
   <div class="row">
     <div class="photo-area six columns">
-      <h1>Meet <%= @cutie.name %></h1>
-        <%= image_tag(@cutie.cutie_pic, class: "show-pic") %><br>
+      <h1>Meet <%= @cutie.name %></h1><br>
+      <%= image_tag(@cutie.cutie_pic, class: "show-pic") %>
         <div class="text-left">
-          Bio: <%= @cutie.bio  %><br>
-          Type: <%= @cutie.cutie_type  %><br>
-          Species: <%= @cutie.species  %><br>
-          Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %>
+
+          <% if @cutie.bio != "" %>
+            Bio: <%= @cutie.bio  %><br>
+          <% end %>
+
+          <% if @cutie.cutie_type != "" %>
+            Type: <%= @cutie.cutie_type  %><br>
+          <% end %>
+
+          <% if @cutie.species != "" %>
+            Species: <%= @cutie.species  %><br>
+          <% end %>
+
+          <% if @cutie.birthdate %>
+            Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %>
+          <% end %>
+
         </div>
     </div>
 
     <div class="six columns">
       <div class="activity">
-        Recent Activity:
 
-        <ul>
-          <% @posts.each do |post| %>
-            <li>
-              <%= post.body %>
-            </li>
+        <% if @cutie.user == current_user %>
+          What have you been up to?<br>
+          <%= form_for([@cutie, @new_post]) do |f| %>
+            <%= f.text_area :body, size: "69x4" %><br>
+            <%= f.submit "Update Status" %>
           <% end %>
-        </ul>
+        <% end %>
 
+
+
+
+        <br>
+        Recent Activity:
+        <% @posts.each do |post| %>
+          <li>
+            <%= post.body %>
+          </li>
+        <% end %>
       </div>
     </div>
 

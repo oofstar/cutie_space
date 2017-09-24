@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <h1>Add A Cutie</h1>
+  <h1>Edit <%= @cutie.name %></h1>
   <div class="row">
       <%= form_for @cutie do |f| %>
         <div class="text-right five columns">
@@ -21,13 +21,15 @@
 
         <div class="text-left five columns">
           <%= f.label :cutie_pic, 'Cutie Pic' %>
-          <%= f.file_field :cutie_pic %>
-          <%= f.hidden_field :cutie_pic_cache %>
+          <%= f.file_field :cutie_pic %><br>
+          <div class="text-center">
+            <%= image_tag(@cutie.cutie_pic, class: "index-pic") %>
+          </div>
         </div>
     </div>
 
     <div>
-          <%= f.submit "Add Cutie" %>
+          <%= f.submit "Edit #{@cutie.name}" %>
         <% end %>
     </div>
 
