@@ -48,3 +48,4 @@ exclude_paths:
 - react/webpack.config.js
 - app/assets/stylesheets/normalize.css
 - app/assets/stylesheets/skeleton.css
+- app/assets/stylesheets/flipper.css
