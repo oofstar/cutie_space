@@ -10,13 +10,13 @@
 
   </div>
 
-  <!-- <% if @user.team_name %>
-    <h2><%= @user.team_name %></h2>
-  <% else %>
-    <h2><%= @user.username %>'s Crew</h2>
-  <% end %> -->
-
   <ul>
+    <% if @user.team_name %>
+      <h2><%= @user.team_name %></h2>
+    <% else %>
+      <h2><%= @user.username %>'s Crew</h2>
+    <% end %>
+
     <% @cuties.each do |cutie| %>
       <li class="crew-box row">
         <span class="two columns">
