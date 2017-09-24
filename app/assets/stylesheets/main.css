@@ -68,6 +68,13 @@ ul {
  list-style: none;
 }
 
+.alerts {
+  color: black;
+  width: 300px;
+  height: 30px;
+  float: right;
+}
+
 .activity {
   margin-top: 75px;
 }
@@ -128,6 +135,10 @@ ul {
   margin-bottom: 20px;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .index-pic {
   max-width: 200px;
   max-height: 200px;
@@ -151,7 +162,6 @@ ul {
 }
 
 .nav-links li {
-  display: inline;
   margin: 4px;
 }
 

@@ -21,25 +21,24 @@
       <ul class="nav-links six columns">
 
         <% if user_signed_in? %>
-          <li class="signed">Signed in as <%= current_user.username %></li><br>
+          <li class="signed">Signed in as <%= current_user.username %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'My Page', user_path(current_user) %></li>
 
         <% else %>
+          <li class="hidden">CutieSpace</li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% end %>
 
-        <li><%= link_to 'See Everyone', cuties_path %></li><br>
-
-        <li>
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </li>
-
+        <li><%= link_to 'See Everyone', cuties_path %></li>
       </ul>
 
     </nav>
+    <span class="alerts">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </span>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
