@@ -1,13 +1,10 @@
 <div class="container">
 
   <div class="row team-header">
-
     <div class="two columns">
       Hi, <%= @user.username %>!<br>
       <%= link_to "Edit Your Profile", edit_registration_path(current_user) %>
     </div>
-
-
   </div>
 
   <ul>
@@ -16,7 +13,7 @@
     <% else %>
       <h2><%= @user.username %>'s Crew</h2>
     <% end %>
-
+    
     <% @cuties.each do |cutie| %>
       <li class="crew-box row">
         <span class="two columns">
