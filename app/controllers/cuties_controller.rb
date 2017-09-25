@@ -2,9 +2,7 @@ class CutiesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    puts "getting all them cuties"
     @cuties = Cuty.all
-    puts Cuty.first.name
   end
 
   def show
