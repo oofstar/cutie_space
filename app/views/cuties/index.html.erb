@@ -2,6 +2,23 @@
   <h1>Meet The Cuties</h1>
 
 
+  <% @cuties.each do |cutie| %>
 
+    <%=link_to cuty_path(cutie) do %>
+
+      <div class="f-container">
+        <div class="front cutie-box">
+          <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+        </div>
+
+        <div class="back cutie-box">
+          <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+          <%= cutie.name %>
+        </div>
+      </div>
+
+    <% end %>
+
+  <% end %>
 
 </div>
