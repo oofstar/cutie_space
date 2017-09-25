@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170925230103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
-    t.boolean "wild", default: false
+    t.integer "wild", default: 0
   end
 
   create_table "posts", force: :cascade do |t|
