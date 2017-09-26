@@ -3,10 +3,10 @@ import { Route, IndexRoute, Router, browserHistory, Redirect } from 'react-route
 import UserShowContainer from './UserShowContainer';
 
 const App = (props) => {
-  debugger
+
   return (
     <Router history={browserHistory} >
-      <Route path="users/:id" component={UserShowContainer} />
+      <Route exact path="users/:id" component={UserShowContainer} />
     </Router>
   );
 }
