@@ -1,0 +1,56 @@
+<div class="container">
+
+  <div class="row team-header">
+    <div class="two columns">
+      Hi, <%= @user.username %>!<br>
+      <%= link_to "Edit Your Profile", edit_registration_path(current_user) %>
+    </div>
+  </div>
+
+  <ul>
+    <% if @user.team_name %>
+      <h2><%= @user.team_name %></h2>
+    <% else %>
+      <h2><%= @user.username %>'s Crew</h2>
+    <% end %>
+
+    <% @cuties.each do |cutie| %>
+      <li class="crew-box row">
+        <span class="two columns">
+          <%= image_tag(cutie.cutie_pic, class: "crew-pic") %><br>
+        </span>
+
+        <span class="three columns">
+          <%= button_to "Visit #{cutie.name}", cuty_path(cutie), method: :get %>
+        </span>
+
+        <span class="three columns">
+          <%= button_to "Edit #{cutie.name}", edit_cuty_path(cutie), method: :get %>
+        </span>
+        <span class="three columns">
+          <%= button_to "Delete #{cutie.name}", cutie, data: { confirm: "Are you sure?" }, method: :delete %>
+        </span>
+      </li>
+    <% end %>
+    <li class="crew-box row">
+      <span class="two columns">
+        <%= image_tag("placeholder.jpg", class: "crew-pic") %><br>
+      </span>
+
+      <span class="three columns">
+        Add A Cutie<br>
+        Add A Cutie
+      </span>
+
+      <span class="three columns">
+        Add A Cutie
+      </span>
+      <span class="three columns">
+        <%= button_to "Add A Cutie", new_cuty_path, method: :get %>
+      </span>
+    </li>
+
+
+  </ul>
+
+</div>

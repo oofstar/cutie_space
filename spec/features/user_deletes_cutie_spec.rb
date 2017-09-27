@@ -11,7 +11,7 @@ feature 'user deletes cuties', %Q{
 # * user visits user page and has links for deleting their cuties
 # * user can delete a cutie
 
-  scenario 'user sees delete buttons on users home page and can delete a cutie' do
+  pending scenario 'user sees delete buttons on users home page and can delete a cutie' do
     user = FactoryGirl.create(:user)
     cutie_1 = FactoryGirl.create(:cuty, user: user)
     cutie_2 = FactoryGirl.create(:cuty, user: user)
