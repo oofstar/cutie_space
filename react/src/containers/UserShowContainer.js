@@ -72,12 +72,11 @@ class UserShowContainer extends Component {
             </span>
 
             <span className="three columns">
-              Add A Cutie<br/>
-              Add A Cutie
+              
             </span>
 
             <span className="three columns">
-              Add A Cutie
+
             </span>
             <span className="three columns">
               <a href={`/cuties/new`}><button>Add A Cutie To Your Crew</button></a>

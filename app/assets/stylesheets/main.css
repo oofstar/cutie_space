@@ -79,8 +79,8 @@ ul {
 
 .alerts {
   color: black;
-  display: inline;
-  /*float: right;*/
+  display: inline-block;
+  margin-left: 5%;
 }
 
 .activity {
