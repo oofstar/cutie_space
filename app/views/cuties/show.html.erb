@@ -2,7 +2,13 @@
 
   <div class="row">
     <div class="photo-area six columns">
-      <h1>Meet <%= @cutie.name %></h1><br>
+
+      <% if @cutie.user == current_user %>
+        <h1>Hi, <%= @cutie.name %></h1><br>
+      <% else %>
+        <h1>Meet <%= @cutie.name %></h1><br>
+      <% end %>
+
       <%= image_tag(@cutie.cutie_pic, class: "show-pic") %>
         <div class="text-left">
 
@@ -19,8 +25,14 @@
           <% end %>
 
           <% if @cutie.birthdate %>
-            Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %>
+            Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %><br>
           <% end %>
+
+          <div class="buddies">
+            <h2>Buds!</h2>
+
+            
+          </div>
 
         </div>
     </div>
@@ -36,10 +48,6 @@
           <% end %>
         <% end %>
 
-
-
-
-        <br>
         Recent Activity:
         <% @posts.each do |post| %>
           <li>
