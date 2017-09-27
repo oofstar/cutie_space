@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, browserHistory } from 'react-router';
 
 const CutieTile = props => {
+  let handleDelete = () => {
+    props.deleteButton(props.id)
+  }
 
   return (
     <li className="crew-box row">
@@ -18,11 +21,12 @@ const CutieTile = props => {
       </span>
 
       <span className="three columns">
-        <a href={`/cuties/${props.cutie.id}/edit`}><button>Delete {props.cutie.name}</button></a>
+        <button onClick={handleDelete}>Delete {props.cutie.name}</button>
       </span>
 
     </li>
   )
 }
+
 
 export default CutieTile;

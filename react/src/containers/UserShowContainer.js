@@ -9,6 +9,16 @@ class UserShowContainer extends Component {
       user: {},
       cuties: []
     }
+    this.handleDelete = this.handleDelete.bind(this)
+  }
+
+  handleDelete(cutieId) {
+    fetch(`/api/v1/cuties/${cutieId}`, {
+      method: 'DELETE',
+      credentials: 'same-origin'
+    }).then(response => response.json())
+    .catch((thing) => console.log("so sad"))
+    this.setState({cuties: this.state.cuties.filter(cutie => cutie.id !== cutieId)})
   }
 
   componentDidMount() {
@@ -39,6 +49,7 @@ class UserShowContainer extends Component {
           key={cutie.id}
           id={cutie.id}
           cutie={cutie}
+          deleteButton={this.handleDelete}
         />
       )
     })
