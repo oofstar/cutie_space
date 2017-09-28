@@ -5,6 +5,7 @@ a {
 
 body {
   background-color: #f3eedc;
+  font-family: 'Poppins', sans-serif;
   color: #220901
 }
 
@@ -59,7 +60,7 @@ textarea {
 nav {
   background-color: #2f004d;
   border-bottom: 5px solid #220901;
-  display: block;
+  /*display: block;*/
   width: 100%;
 }
 
@@ -167,14 +168,22 @@ ul {
 
 .logo {
   color: #f3eedc;
-  font-size: 7em;
+  /*font-size: 7em;*/
   /*border: 3px solid black;*/
-  padding-left: 5%;
+  padding: 5%;
 }
 
-.logo a {
+/*.logo a {
   color: #f3eedc;
   text-decoration: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+}*/
+
+.logo img {
+  width: 100%;
+  margin: 5%;
 }
 
 .middle {
@@ -182,19 +191,23 @@ ul {
    padding-top: 50%;
 }
 
-.nav-links {
+.nav-link-box {
   /*border: 3px solid black;*/
   text-align: right;
-  padding-right: 5%;
+  color: #f3eedc;
+  padding-right: 2%;
+}
+
+.nav-link-box a {
   color: #f3eedc;
 }
 
-.nav-links a {
-  color: #f3eedc;
-}
-
-.nav-links li {
-  margin: .75%;
+.nav-links {
+  margin: 1%;
+  font-size: 1.8em;
+  margin-top: 14%;
+  display: inline-block;
+  margin-left: 4%;
 }
 
 .photo-area {

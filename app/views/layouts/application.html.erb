@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cutie Space</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lora|Merriweather|Mukta|Poppins" rel="stylesheet">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -13,26 +13,27 @@
 
   <body>
     <nav class="row">
-
-      <span class="six columns">
-        <span class="logo"><%= link_to "Cutie Space", cuties_path %></span>
+      <span class="three columns">
+        <span class="logo">
+          <%=  image_tag("logo.png")  %>
+        </span>
       </span>
 
-      <ul class="nav-links six columns">
+      <div class="nav-link-box nine columns">
 
         <% if user_signed_in? %>
-          <li class="signed">Signed in as <%= current_user.username %></li>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to 'My Page', user_path(current_user) %></li>
+          <span class="nav-links">Signed in as <%= current_user.username %></span>
+          <span class="nav-links"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></span>
+          <span class="nav-links"><%= link_to 'My Page', user_path(current_user) %></span>
 
         <% else %>
-          <li class="hidden">CutieSpace</li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <span class="hidden nav-links">CutieSpace</span>
+          <span class="nav-links"><%= link_to 'Sign In', new_user_session_path %></span>
+          <span class="nav-links"><%= link_to 'Sign Up', new_user_registration_path %></span>
         <% end %>
 
-        <li><%= link_to 'See Everyone', cuties_path %></li>
-      </ul>
+        <span class="nav-links"><%= link_to 'See Everyone', cuties_path %></span>
+      </div>
     </nav>
 
     <span class="alerts">
