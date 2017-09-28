@@ -7,7 +7,14 @@ class CutiesController < ApplicationController
 
   def show
     @cutie = Cuty.find(params[:id])
+    @user = @cutie.user
     @posts = @cutie.posts.order(created_at: :desc)
+    @buddies = @user.cuties
+    @user.followees.each do |followee|
+      followee.cuties.each do |cutie|
+        @buddies << cutie
+      end
+    end
     @new_post = Post.new
   end
 

@@ -99,6 +99,10 @@ ul {
   margin-top: 30px;
 }
 
+.buddy-pic {
+  height: 80px;
+}
+
 .btn {
   color: #220901;
   margin-bottom: 0;
