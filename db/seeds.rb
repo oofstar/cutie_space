@@ -66,7 +66,7 @@ my_cuties = [
 
   [
     "Alex P Fair",
-    Rails.root.join('public', 'images', 'alex.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/alex.jpg",
     "Alex grew up in brooklyn and misses it terribly!",
     "Softie",
     "Polar Bear",
@@ -76,7 +76,7 @@ my_cuties = [
 
   [
     "Alox P Fair",
-    Rails.root.join('public', 'images', 'alox.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/alox.jpg",
     "Alox is a well known QTV personality and the mastermind behind the concept of Spoon Therapy.",
     "Softie",
     "Polar Bear",
@@ -86,7 +86,7 @@ my_cuties = [
 
   [
     "Manatee Manatee",
-    Rails.root.join('public', 'images', 'manny.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/manny.jpg",
     "Manny is passionate about social justice, clean water, and hugs.",
     "Softie",
     "Manatee",
@@ -96,7 +96,7 @@ my_cuties = [
 
   [
     "Small Timer",
-    Rails.root.join('public', 'images', 'small-timer.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/small-timer.jpg",
     "Small Timer works down in the tiny office right by the exit. He keeps long hours, does a great job, and gets zero glory or reward. You know what that means... You got that right... PARTY TIME! Please join Small Timer on his fantastic adventure as he expresses his wild side and devours the wonders life has to offer. Wonders such as dry toast, no butter",
     "Softie",
     "UglyDoll",
@@ -106,7 +106,7 @@ my_cuties = [
 
   [
     "Anthony",
-    Rails.root.join('public', 'images', 'anthony.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/anthony.jpg",
     "Anthony loves rock and roll and fire!",
     "Softie",
     "Dragon",
@@ -116,7 +116,7 @@ my_cuties = [
 
   [
     "Herbie Hippo",
-    Rails.root.join('public', 'images', 'herbie.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/herbie.jpg",
     "Herbert J Hippopotamus thinks the world is a beautiful place.",
     "Softie",
     "Hippo",
@@ -126,7 +126,7 @@ my_cuties = [
 
   [
     "Pumpkin",
-    Rails.root.join('public', 'images', 'pumpkin.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/pumpkin.jpg",
     "Pumpkin likes to travel and feel the wind on her face.",
     "Softie",
     "Pound Puppy",
@@ -136,7 +136,7 @@ my_cuties = [
 
   [
     "Smoochie",
-    Rails.root.join('public', 'images', 'smoochie.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/smoochie.jpg",
     "Smoochie likes vegan baking and can't get enough of snacks.",
     "Softie",
     "Pound Puppy",
@@ -146,7 +146,7 @@ my_cuties = [
 
   [
     "Snorlax",
-    Rails.root.join('public', 'images', 'snorlax.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/snorlax.jpg",
     "Snorlax loves hardcore music, moshing, snacks and naps!",
     "Softie",
     "Pocket Monster",
@@ -156,7 +156,7 @@ my_cuties = [
 
   [
     "Hester Golem",
-    Rails.root.join('public', 'images', 'hester.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/hester.jpg",
     "Hester wants to eat your brains!",
     "Softie",
     "Zombie Bear",
@@ -166,7 +166,7 @@ my_cuties = [
 
   [
     "Dave Darinko",
-    Rails.root.join('public', 'images', 'dave-darinko.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/dave-darinko.jpg",
     "Dave, Dave, Dave Darinko! He's a Dave Darinko! He loves to play pachinko! Dave, Dave, Dave Darinko!",
     "Softie",
     "UglyDoll",
@@ -176,7 +176,7 @@ my_cuties = [
 
   [
     "The Trio",
-    Rails.root.join('public', 'images', 'trio.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/trio.jpg",
     "Mysterious mysteries surround these cuties who arrived in tiny space pods from Key Food.",
     "Softie",
     "Space Creatures",
@@ -186,7 +186,7 @@ my_cuties = [
 
   [
     "Hortense Horse",
-    Rails.root.join('public', 'images', 'hortense.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/hortense.jpg",
     "From the wilds of Iceland, Hortense is trying to master a vegan version of fermented shark.",
     "Softie",
     "Horse",
@@ -196,7 +196,7 @@ my_cuties = [
 
   [
     "Kyoko",
-    Rails.root.join('public', 'images', 'kyoko.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/kyoko.jpg",
     "Weird little lady with an overflow of creative energy.",
     "Softie",
     "Bunny?",
@@ -206,7 +206,7 @@ my_cuties = [
 
   [
     "Panda Panda",
-    Rails.root.join('public', 'images', 'panda.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/panda.jpg",
     "Gruff but loveable, Panda is a very serious panda.",
     "Softie",
     "Panda",
@@ -216,7 +216,7 @@ my_cuties = [
 
   [
     "Pouffy P Fair",
-    Rails.root.join('public', 'images', 'pouffy.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/pouffy.jpg",
     "Pouffy is a pretty laid back older lady with a real flair for fashion.",
     "Softie",
     "Cat",
@@ -226,7 +226,7 @@ my_cuties = [
 
   [
     "Vito Fair",
-    Rails.root.join('public', 'images', 'vito.jpg' ).open,
+    "http://oofindustries.net/cutie-pics/vito.jpg",
     "A retired pugilist, Vito has a great many friends in low places.",
     "Softie",
     "Koala",
@@ -236,10 +236,10 @@ my_cuties = [
 ]
 
 my_cuties.each do |cutie_info|
-  name, cutie_pic, bio, cutie_type, species, birthdate, user = cutie_info
+  name, remote_cutie_pic_url, bio, cutie_type, species, birthdate, user = cutie_info
   Cuty.create(
     name: name,
-    cutie_pic: cutie_pic,
+    remote_cutie_pic_url: remote_cutie_pic_url,
     bio: bio,
     cutie_type: cutie_type,
     species: species,
