@@ -9,6 +9,8 @@ status_updates = [
   "We met at 11:00 AM today. That is, Stalin, Churchill and the U.S. president. But I had a most important session with Lord Mountbatten and General Marshall before that. We have discovered the most terrible bomb in the history of the world. It may be the fire destruction prophesied in the Euphrates Valley era, after Noah and his fabulous ark. Anyway, we think we have found the way to cause a disintegration of the atom. An experiment in the New Mexico desert was startling—to put it mildly. Thirteen pounds of the explosive caused a crater six hundred feet deep and twelve hundred feet in diameter, knocked over a steel tower a half mile away, and knocked men down ten thousand yards away.",
 
   "She had a nose like the Duke of Wellington & great horse teeth & cold prominent eyes. When we came in she was sitting perched on a 3 cornered chair with knitting in her hands. An arrow fastened her collar. And before 5 minutes had passed she told us that two of her sons had been killed in the war. This, one felt, was to her credit. She taught dressmaking. Everything in the room was red brown & glossy. Sitting there I tried to coin a few compliments. But they perished in the icy sea between us. And then there was nothing."
+
+  "I was cute today!"
 ]
 
 
