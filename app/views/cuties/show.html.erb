@@ -30,8 +30,9 @@
 
           <div class="buddies">
             <h2>Buds!</h2>
-
-            
+            <% @buddies.each do |buddy| %>
+              <%= image_tag(buddy.cutie_pic, class: "buddy-pic") %>
+            <% end %>
           </div>
 
         </div>
