@@ -1,16 +1,16 @@
-<div class="container" ontouchstart="this.classList.toggle("hover")">
+<div class="" ontouchstart="this.classList.toggle("hover")">
   <h1>Meet The Cuties</h1>
   <% @cuties.each do |cutie| %>
 
     <%=link_to cuty_path(cutie) do %>
 
-      <div class="f-container">
-        <div class="front cutie-box">
-          <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+      <div class="">
+        <div class="">
+          <%= image_tag(cutie.cutie_pic, class: "") %><br>
         </div>
 
-        <div class="back cutie-box">
-          <%= image_tag(cutie.cutie_pic, class: "index-pic") %><br>
+        <div class="">
+          <%= image_tag(cutie.cutie_pic, class: "") %><br>
           <%= cutie.name %>
         </div>
       </div>

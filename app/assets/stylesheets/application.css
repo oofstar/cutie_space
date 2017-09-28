@@ -13,8 +13,8 @@
  * require_tree .
  *= require normalize
  *= require skeleton
- *= require main
- *= require flipper.css
+ * require main
+ * require flipper.css
  *= require_self
 
  */
