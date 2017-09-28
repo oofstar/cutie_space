@@ -9,7 +9,7 @@ class CutiesController < ApplicationController
     @cutie = Cuty.find(params[:id])
     @user = @cutie.user
     @posts = @cutie.posts.order(created_at: :desc)
-    @buddies = []
+    @buddies = @user.cuties
     @user.followees.each do |followee|
       followee.cuties.each do |cutie|
         @buddies << cutie
