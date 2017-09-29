@@ -9,12 +9,30 @@ class CutiesController < ApplicationController
     @cutie = Cuty.find(params[:id])
     @user = @cutie.user
     @posts = @cutie.posts.order(created_at: :desc)
-    @buddies = @user.cuties
-    @user.followees.each do |followee|
-      followee.cuties.each do |cutie|
+    @buddies = []
+
+    @user.cuties.each do |cutie|
+      if cutie != @cutie
         @buddies << cutie
       end
     end
+
+    @user.followees.each do |followee|
+      followee.cuties.each do |cutie|
+        if !@buddies.include?(cutie)
+          @buddies << cutie
+        end
+      end
+    end
+
+    @user.followers.each do |follower|
+      follower.cuties.each do |cutie|
+        if !@buddies.include?(cutie)
+          @buddies << cutie
+        end
+      end
+    end
+
     @new_post = Post.new
   end
 
