@@ -1,7 +1,7 @@
 desc "cuties make friends"
 task make_friends: :environment do
 
-  action_cuties = Cuty.all
+  action_cuties = Cuty.where(wild: 1)
 
   puts "hello"
 
