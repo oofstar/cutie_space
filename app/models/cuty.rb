@@ -27,6 +27,7 @@ class Cuty < ApplicationRecord
         friends << friend
       end
     end
+    
     return friends
   end
 
