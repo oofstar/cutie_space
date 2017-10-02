@@ -2,7 +2,7 @@ class CutiesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @cuties = Cuty.all
+    @cuties = Cuty.all.shuffle
   end
 
   def show
@@ -12,27 +12,11 @@ class CutiesController < ApplicationController
     @buddies = @cutie.friendslist
 
 
-    # @user.cuties.each do |cutie|
-    #   if cutie != @cutie
-    #     @buddies << cutie
-    #   end
-    # end
-    #
-    # @user.followees.each do |followee|
-    #   followee.cuties.each do |cutie|
-    #     if !@buddies.include?(cutie)
-    #       @buddies << cutie
-    #     end
-    #   end
-    # end
-    #
-    # @user.followers.each do |follower|
-    #   follower.cuties.each do |cutie|
-    #     if !@buddies.include?(cutie)
-    #       @buddies << cutie
-    #     end
-    #   end
-    # end
+    @user.cuties.each do |cutie|
+      if cutie != @cutie
+        @buddies << cutie
+      end
+    end
 
     @new_post = Post.new
   end

@@ -57,10 +57,9 @@ class UserShowContainer extends Component {
     return(
       <div className="container">
         <div className="row team-header">
-          <div className="two columns">
-            Hi, {this.state.user.username}<br />
-            <a href="/users/edit">Edit Your Profile</a>
-          </div>
+
+            Hi, <a href="/users/edit">{this.state.user.username}</a>
+
         </div>
 
         <ul>
@@ -72,7 +71,7 @@ class UserShowContainer extends Component {
             </span>
 
             <span className="three columns">
-              
+
             </span>
 
             <span className="three columns">
@@ -86,13 +85,6 @@ class UserShowContainer extends Component {
       </div>
     )
   }
-
-
-
-
-
-
-
 
 }
 
