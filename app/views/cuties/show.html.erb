@@ -1,16 +1,24 @@
 <div class="container">
 
   <div class="row">
-    <div class="photo-area six columns">
+    <div class="photo-area five columns text-left">
 
       <% if @cutie.user == current_user %>
-        <h1>Hi, <%= @cutie.name %></h1><br>
+        <h2>Hi, <%= @cutie.name %></h2><br>
       <% else %>
         <h1>Meet <%= @cutie.name %></h1><br>
       <% end %>
 
       <%= image_tag(@cutie.cutie_pic, class: "show-pic") %>
         <div class="text-left">
+
+          <% if @cutie.user == current_user %>
+            What have you been up to?<br>
+            <%= form_for([@cutie, @new_post]) do |f| %>
+              <%= f.text_area :body, size: "69x2" %><br>
+              <%= f.submit "Update Status" %>
+            <% end %>
+          <% end %>
 
           <% if @cutie.bio != "" %>
             Bio: <%= @cutie.bio  %><br>
@@ -28,29 +36,19 @@
             Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %><br>
           <% end %>
 
-          <div class="buddies">
-            <h2>Buds!</h2>
-            <% @buddies.each do |buddy| %>
-              <%= link_to cuty_path(buddy) do %>
-                <%= image_tag(buddy.cutie_pic, class: "buddy-pic") %>
-              <% end %>
-            <% end %>
-          </div>
-
         </div>
     </div>
 
-    <div class="six columns">
-      <div class="activity">
-
-        <% if @cutie.user == current_user %>
-          What have you been up to?<br>
-          <%= form_for([@cutie, @new_post]) do |f| %>
-            <%= f.text_area :body, size: "69x4" %><br>
-            <%= f.submit "Update Status" %>
+    <div class="seven columns">
+        <div class="buddies">
+          <h3>Buds!</h3>
+          <% @buddies.each do |buddy| %>
+            <%= link_to cuty_path(buddy) do %>
+              <%= image_tag(buddy.cutie_pic, class: "buddy-pic") %>
+            <% end %>
           <% end %>
-        <% end %>
-
+        </div>
+        <div class="activity">
         Recent Activity:
         <% @posts.each do |post| %>
           <li>

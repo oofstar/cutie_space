@@ -248,13 +248,13 @@ my_cuties.each do |cutie_info|
   )
 end
 
-cuties = Cuty.all
+# cuties = Cuty.all
 
-cuties.each do |cutie|
-  4.times do
-    Post.create(
-      body: status_updates.sample,
-      cuty: cutie
-    )
-  end
-end
+# cuties.each do |cutie|
+#   4.times do
+#     Post.create(
+#       body: status_updates.sample,
+#       cuty: cutie
+#     )
+#   end
+# end

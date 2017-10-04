@@ -17,7 +17,7 @@
 
         <%= f.label :birthdate %>
         <%= f.date_select(:birthdate, start_year: Date.current.year, end_year: 1900, include_blank: true) %><br>
-        <span><%= f.label :wild, 'Would you like ' + @cutie.name + " to go on adventures you can read about when you view their page? Check this box!"%>
+        <span><%= f.label :wild, 'Would you like ' + @cutie.name + " to go on adventures and make new friends you can read about when you view their page? Check this box!"%>
         <%= f.check_box :wild %></span>
       </div>
 
