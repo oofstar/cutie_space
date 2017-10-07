@@ -16,6 +16,7 @@ class Cuty < ApplicationRecord
 
   def friendslist
     friends = []
+
     self.frienders.each do |friend|
       if !friends.include?(friend)
         friends << friend
@@ -27,7 +28,7 @@ class Cuty < ApplicationRecord
         friends << friend
       end
     end
-    
+
     return friends
   end
 
