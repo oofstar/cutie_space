@@ -30,10 +30,12 @@ class CutiesController < ApplicationController
     @team = @cutie.user.cuties
 
     @team.each do |member|
-      Friendship.create(
-        friender: member,
-        friendee: @cutie
-      )
+      if member != @cutie
+        Friendship.create(
+          friender: member,
+          friendee: @cutie
+        )
+      end
     end
 
   end

@@ -237,7 +237,7 @@ my_cuties = [
 
 my_cuties.each do |cutie_info|
   name, remote_cutie_pic_url, bio, cutie_type, species, birthdate, user = cutie_info
-  Cuty.create(
+  cutie = Cuty.create(
     name: name,
     remote_cutie_pic_url: remote_cutie_pic_url,
     bio: bio,
@@ -247,7 +247,21 @@ my_cuties.each do |cutie_info|
     user: user,
     wild: 1
   )
+
+  team = cutie.user.cuties
+
+  team.each do |member|
+    if member != cutie
+      Friendship.create(
+        friender: member,
+        friendee: cutie
+      )
+    end
+  end
+
 end
+
+
 
 # cuties = Cuty.all
 
