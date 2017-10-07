@@ -14,6 +14,7 @@ task make_friends: :environment do
       puts cutie.name
 
       buds = cutie.friendslist
+      binding.pry
       new_friend = false
 
       while new_friend == false
