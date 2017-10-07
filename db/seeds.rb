@@ -245,7 +245,7 @@ my_cuties.each do |cutie_info|
     species: species,
     birthdate: birthdate,
     user: user,
-    wild: 0
+    wild: 1
   )
 
   team = cutie.user.cuties
