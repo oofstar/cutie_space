@@ -10,14 +10,6 @@ class CutiesController < ApplicationController
     @user = @cutie.user
     @posts = @cutie.posts.order(created_at: :desc)
     @buddies = @cutie.friendslist
-
-
-    @user.cuties.each do |cutie|
-      if cutie != @cutie
-        @buddies << cutie
-      end
-    end
-
     @new_post = Post.new
   end
 
@@ -34,6 +26,16 @@ class CutiesController < ApplicationController
       flash[:notice] = @cutie.errors.full_messages.join(', ')
       render action: 'new'
     end
+
+    @team = @cutie.user.cuties
+
+    @team.each do |member|
+      Friendship.create(
+        friender: member,
+        friendee: @cutie
+      )
+    end
+
   end
 
   def edit

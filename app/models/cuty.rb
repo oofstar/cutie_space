@@ -30,6 +30,7 @@ class Cuty < ApplicationRecord
     end
 
     return friends
+    binding.pry
   end
 
 

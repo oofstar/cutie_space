@@ -244,7 +244,8 @@ my_cuties.each do |cutie_info|
     cutie_type: cutie_type,
     species: species,
     birthdate: birthdate,
-    user: user
+    user: user,
+    wild: 1
   )
 end
 
