@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  root 'cuties#index'
+  root 'static_pages/users#index'
 
   resources :users, only: [:index, :show]
 
@@ -14,5 +14,13 @@ Rails.application.routes.draw do
       resources :users
       resources :cuties
     end
+  end
+
+  namespace :admin do
+    resources :users, only: [:index, :destroy, :edit, :update]
+  end
+
+  namespace :static_pages do
+    resources :users
   end
 end
