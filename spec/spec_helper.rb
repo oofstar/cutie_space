@@ -11,8 +11,8 @@ RSpec.configure do |config|
       # FileUtils.rm_rf(CarrierWave::Uploader::Base.root)
     end
   end
-
   require_relative 'support/database_cleaner'
+
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
