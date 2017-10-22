@@ -68,7 +68,7 @@ class CutiesController < ApplicationController
   private
 
   def cuty_params
-    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic, :wild)
+    params.require(:cuty).permit(:name, :bio, :cutie_type, :species, :birthdate, :cutie_pic, :wild, :favorite_genre, :location)
   end
 
 end

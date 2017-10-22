@@ -163,6 +163,15 @@ ul {
   border-radius: 5px;
 }
 
+.footer {
+  background-color: #2f004d;
+  color: #f3eedc;
+}
+
+.footer a {
+  color: #f3eedc;
+}
+
 .hidden {
   visibility: hidden;
 }

@@ -29,6 +29,13 @@
         <%= f.label :cutie_pic, 'Cutie Pic' %>
         <%= f.file_field :cutie_pic %><br>
         <%= image_tag(@cutie.cutie_pic, class: "index-pic") %><br>
+
+        <%= f.label :favorite_genre, "#{@cutie.name}'s favorite book genre" %>
+        <%= f.text_field :favorite_genre %><br>
+
+        <%= f.label :location, "What zipcode does your cutie like to hang out in?" %>
+        <%= f.text_field :location %><br>
+
         <%= f.submit "Edit #{@cutie.name}" %>
       </div>
     <% end %>

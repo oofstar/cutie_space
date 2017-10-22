@@ -36,6 +36,10 @@
             Birth Date: <%= @cutie.birthdate.strftime('%B %d, %Y')  %><br>
           <% end %>
 
+          <% if @cutie.favorite_genre %>
+            Favorite Book Genre: <%= @cutie.favorite_genre %><br>
+          <% end %>
+
         </div>
     </div>
 
