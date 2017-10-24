@@ -16,6 +16,7 @@ gem "fog-aws"
 gem 'fog'
 gem 'foundation-rails'
 gem 'simple_form'
+gem 'httparty'
 
 group :development do
   gem 'listen', '~> 3.0.5'
