@@ -79,6 +79,7 @@ p {
 select {
   color: black;
   background-color: #f3eedc;
+  margin-left: 10px;
 }
 
 ul {
@@ -164,7 +165,10 @@ ul {
 }
 
 .footer {
+  position: fixed;
+  width: 100%;
   background-color: #2f004d;
+  bottom: 0;
   color: #f3eedc;
 }
 

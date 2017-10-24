@@ -31,7 +31,48 @@
         <%= image_tag(@cutie.cutie_pic, class: "index-pic") %><br>
 
         <%= f.label :favorite_genre, "#{@cutie.name}'s favorite book genre" %>
-        <%= f.text_field :favorite_genre %><br>
+        <%= f.collection_select(:favorite_genre, [
+          ["Art"],
+          ["Biography"],
+          ["Business"],
+          ["Chick-lit"],
+          ["Children's"],
+          ["Christian"],
+          ["Classics"],
+          ["Comics"],
+          ["Contemporary"],
+          ["Cookbooks"],
+          ["Crime"],
+          ["Ebooks"],
+          ["Fantasy"],
+          ["Fiction"],
+          ["Gay and Lesbian"],
+          ["Graphic novels"],
+          ["Historical Fiction"],
+          ["History"],
+          ["Horror"],
+          ["Humor and Comedy"],
+          ["Manga"],
+          ["Memoir"],
+          ["Music"],
+          ["Mystery"],
+          ["Non-fiction"],
+          ["Paranormal"],
+          ["Philosophy"],
+          ["Poetry"],
+          ["Psychology"],
+          ["Religion"],
+          ["Romance"],
+          ["Science"],
+          ["Science fiction"],
+          ["Self help"],
+          ["Suspense"],
+          ["Spirituality"],
+          ["Sports"],
+          ["Thriller"],
+          ["Travel"],
+          ["Young-adult"]
+        ], :first, :first, {:include_blank  => 'choose genre' }) %><br>
 
         <%= f.label :location, "What zipcode does your cutie like to hang out in?" %>
         <%= f.text_field :location %><br>
