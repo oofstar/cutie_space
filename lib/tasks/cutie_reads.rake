@@ -14,7 +14,7 @@ task cutie_reads: :environment do
       random_book = rand(19) + 1
       genre = cutie.favorite_genre
       # build api call url
-      call_url = "https://www.goodreads.com/search.xml?key=#{ENV['GOODREADS_KEY']}&q=#{genre}&search_type=books&search%5Bfield=genre&page=#{random_page}"
+      call_url = "https://www.goodreads.com/search.xml?key=#{ENV['GOODREADS_KEY']}&q=#{genre}&search_type=books&search%5Bfield=title&page=#{random_page}"
       response = HTTParty.get(call_url)
 
       book = response["GoodreadsResponse"]["search"]["results"]["work"][random_book]
@@ -44,6 +44,7 @@ task cutie_reads: :environment do
 
     end
 
+    # api can only be called once per second
     sleep 2
   end
 
