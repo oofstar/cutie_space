@@ -18,12 +18,27 @@ task cutie_reads: :environment do
       response = HTTParty.get(call_url)
 
       book = response["GoodreadsResponse"]["search"]["results"]["work"][random_book]
-      
-      puts "page: #{random_page}"
-      puts "book: #{random_book}"
-      puts "genre: #{genre}"
-      puts "url: #{call_url}"
-      puts "book title: #{book["best_book"]["title"]}"
+
+      # puts "page: #{random_page}"
+      # puts "book: #{random_book}"
+      # puts "genre: #{genre}"
+      # puts "url: #{call_url}"
+      # puts "book title: #{book["best_book"]["title"]}"
+
+      if book["average_rating"].to_f < 3
+        post_content = "I tried to read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today, but I didn't think it was very good and I quit."
+      elsif book["average_rating"].to_f > 4
+        post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. IT WAS SO GOOD!"
+      else
+        post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. I liked it ok."
+      end
+
+      puts post_content + "\n"
+
+      Post.create(
+          body: post_content,
+          cuty: cutie
+        )
 
     end
 
