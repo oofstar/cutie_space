@@ -33,12 +33,13 @@ task cutie_reads: :environment do
         post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. I liked it ok."
       end
 
-      puts post_content + "\n" + book["best_book"]["small_image_url"]
+      puts post_content + "https://www.goodreads.com/book/show/" + book["best_book"]["id"].to_s
 
       Post.create(
           body: post_content,
           cuty: cutie,
-          media_url: book["best_book"]["small_image_url"]
+          media_url: book["best_book"]["small_image_url"],
+          link_url: "https://www.goodreads.com/book/show/" + book["best_book"]["id"].to_s
         )
 
     end
