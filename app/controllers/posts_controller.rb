@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body, :media_url)
+    params.require(:post).permit(:body, :media_url, :link_url)
   end
 
 end

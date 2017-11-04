@@ -66,7 +66,6 @@ textarea {
 
 nav {
   background-color: #2f004d;
-  /*border-bottom: 5px solid #220901;*/
   width: 100%;
   height: 4%;
 }
@@ -79,6 +78,7 @@ p {
 select {
   color: black;
   background-color: #f3eedc;
+  margin-left: 10px;
 }
 
 ul {
@@ -102,10 +102,7 @@ ul {
   padding: 5px;
   list-style: none;
   width: 100%;
-}
-
-.buddies {
-  /*margin-top: 30px;*/
+  overflow: auto;
 }
 
 .buddy-pic {
@@ -128,11 +125,6 @@ ul {
   border-radius: 5px;
 }
 
-/*.crew-box:hover {
-  background-color: white;
-  box-shadow: 10px 10px 5px #888888;
-}*/
-
 .crew-pic {
   height: 50px;
 }
@@ -143,9 +135,12 @@ ul {
   background-color: #f3eedc;
 }
 
+.post-media {
+  float: left;
+  margin-right: 10px;
+}
+
 .cutie-box {
-  /*background-color: #f3eedc;*/
-  /*text-align: center;*/
   font-size: 1em;
   border: 3px solid #5B3F5A;
   height: 200px;
@@ -158,9 +153,19 @@ ul {
   text-align: right;
   border: 3px solid #5B3F5A;
   margin: 10px;
-  /*height: 250px;*/
   padding: 0;
   border-radius: 5px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #2f004d;
+  bottom: 0;
+  color: #f3eedc;
+}
+
+.footer a {
+  color: #f3eedc;
 }
 
 .hidden {
@@ -183,7 +188,6 @@ ul {
 }
 
 .nav-link-box {
-  /*border: 3px solid black;*/
   text-align: right;
   color: #f3eedc;
   padding-right: 2%;
@@ -206,7 +210,6 @@ ul {
 
 .show-pic {
   width: 320px;
-  /*margin-bottom: 20px;*/
 }
 
 .square-container {
@@ -234,5 +237,3 @@ ul {
 .text-right {
   text-align: right;
 }
-
-/*-------------------*/
