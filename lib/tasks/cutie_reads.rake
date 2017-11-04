@@ -1,7 +1,6 @@
 desc "update status automatically with book read"
 task cutie_reads: :environment do
 
-
   @action_cuties = Cuty.where(wild: 1)
   puts "hello"
 
@@ -33,7 +32,7 @@ task cutie_reads: :environment do
         post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. I liked it ok."
       end
 
-      puts post_content + "https://www.goodreads.com/book/show/" + book["best_book"]["id"].to_s
+      puts post_content + "\n" + book["best_book"]["small_image_url"]
 
       Post.create(
           body: post_content,
@@ -47,17 +46,6 @@ task cutie_reads: :environment do
     # api can only be called once per second
     sleep 2
   end
-
-  #
-  # title = response["GoodreadsResponse"]["search"]["results"]["work"][1]["best_book"]["title"]
-
-  # @action_cuties.each do |cutie|
-  #   puts cutie.name
-  #   Post.create(
-  #     body: @status_updates.sample,
-  #     cuty: cutie
-  #   )
-  # end
 
   puts "everyone updated"
 end
