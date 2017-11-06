@@ -23,26 +23,94 @@ task status_update: :environment do
     )
   end
 
-  puts "hello"
+  def read_book(cutie)
+    # sleeping prevents too many calls to the api at one time.
+    sleep 2
+    random_page = rand(9) + 1
+    random_book = rand(19) + 1
+    genre = cutie.favorite_genre
+    # build api call url
+    call_url = "https://www.goodreads.com/search.xml?key=#{ENV['GOODREADS_KEY']}&q=#{genre}&search_type=books&search%5Bfield=title&page=#{random_page}"
+    response = HTTParty.get(call_url)
 
-  @action_cuties.each do |cutie|
-    chance = rand(100)
+    book = response["GoodreadsResponse"]["search"]["results"]["work"][random_book]
 
-    puts cutie.name
-    puts chance
-
-    if chance < 30
-      puts "diary"
-    elsif chance >= 30 && chance < 60
-      puts "read a book"
-    elsif chance >= 60 && chance < 75
-      puts "made a friend"
+    if book["average_rating"].to_f < 3
+      post_content = "I tried to read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today, but I didn't think it was very good and I quit."
+    elsif book["average_rating"].to_f > 4
+      post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. IT WAS SO GOOD!"
     else
-      puts "no update"
+      post_content = "I read #{book["best_book"]["title"]} by #{book["best_book"]["author"]["name"]} today. I liked it ok."
+    end
+
+    puts post_content + "\n" + book["best_book"]["small_image_url"]
+
+    Post.create(
+        body: post_content,
+        cuty: cutie,
+        media_url: book["best_book"]["small_image_url"],
+        link_url: "https://www.goodreads.com/book/show/" + book["best_book"]["id"].to_s
+      )
+
+  end
+
+  def make_friend(cutie)
+    buds = cutie.friendslist
+    new_friend = false
+    tally = 1
+
+    while new_friend == false && tally < @action_cuties.length
+      new_bud = @action_cuties.sample
+      if new_bud != cutie && !buds.include?(new_bud)
+        Friendship.create(
+          friender: cutie,
+          friendee: new_bud
+        )
+        new_friend = true
+        Post.create(
+          body: "Became buds with #{new_bud.name}",
+          cuty: cutie
+        )
+
+        Post.create(
+          body: "Became buds with #{cutie.name}",
+          cuty: new_bud
+        )
+      else
+        tally += 1
+      end
+
     end
 
   end
 
+  puts "hello"
+
+  @action_cuties.each do |cutie|
+    # avoid book reading function for cuties without favorite genre selected
+    if cutie.favorite_genre == "" || cutie.favorite_genre.nil?
+      chance = rand(5)
+    else
+      chance = rand(6)
+    end
+
+    puts cutie.name
+    puts chance
+
+    if chance == 1
+      puts "-diary"
+      diary_entry(cutie)
+    elsif chance == 5
+      puts "-read a book"
+      read_book(cutie)
+    elsif chance == 3
+      puts "-made a friend"
+      make_friend(cutie)
+    else
+      puts "-no update"
+    end
+
+  end
 
   puts "everyone updated"
 end

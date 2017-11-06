@@ -7,7 +7,7 @@ body {
   background-color: #f3eedc;
   font-size: 1em;
   font-family: 'Poppins', sans-serif;
-  color: #220901
+  color: #220901;
 }
 
 button {
@@ -31,8 +31,13 @@ h1, h2, h3 {
   margin: 0;
 }
 
-input[type="checkbox"] {
-  width: inherit;
+input {
+  background-color: #f3eedc;
+  width: 200px;
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 input[type="submit"] {
@@ -42,13 +47,9 @@ input[type="submit"] {
   border-radius: 10px;
 }
 
-input {
-  background-color: #f3eedc;
-  width: 200px;
-  color: black;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+input[type="checkbox"] {
+  width: inherit;
+  margin: 0;
 }
 
 input[type="file"] {
@@ -236,4 +237,12 @@ ul {
 
 .text-right {
   text-align: right;
+}
+
+.wild-explanation {
+  border-top: 1px solid #220901;
+  font-size: .70em;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 95%;
 }
