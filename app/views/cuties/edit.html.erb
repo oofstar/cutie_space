@@ -17,18 +17,6 @@
 
         <%= f.label :birthdate %>
         <%= f.date_select(:birthdate, start_year: Date.current.year, end_year: 1900, include_blank: true) %><br>
-        <span>
-          <%= f.label :wild, 'Would you like ' + @cutie.name + " to go on adventures and make new friends you can read about when you view their page? Check this box!"%>
-          <%= f.check_box :wild %>
-          <br>When this box is checked, a status update will be automatically posted by your cutie once a day, and sometimes they will become buds with a new cutie friend! When you visit their page, you can see what they've been up to while you weren't looking!
-        </span>
-
-      </div>
-
-      <div class="text-left five columns">
-        <%= f.label :cutie_pic, 'Cutie Pic' %>
-        <%= f.file_field :cutie_pic %><br>
-        <%= image_tag(@cutie.cutie_pic, class: "index-pic") %><br>
 
         <%= f.label :favorite_genre, "#{@cutie.name}'s favorite book genre" %>
         <%= f.collection_select(:favorite_genre, [
@@ -74,8 +62,21 @@
           ["Young-Adult", "young-adult"]
         ], :second, :first, {:include_blank  => 'choose genre' }) %><br>
 
-        <%= f.label :location, "What zipcode does your cutie like to hang out in?" %>
-        <%= f.text_field :location %><br>
+        <!-- <%= f.label :location, "What zipcode does your cutie like to hang out in?" %>
+        <%= f.text_field :location %><br> -->
+
+      </div>
+
+      <div class="text-left five columns">
+        <%= f.label :cutie_pic, 'Cutie Pic' %>
+        <%= f.file_field :cutie_pic %><br>
+        <%= image_tag(@cutie.cutie_pic, class: "index-pic") %><br>
+
+        <span>
+          <%= f.check_box :wild %>
+          <%= f.label :wild, "Check this box if you'd like " + @cutie.name + " to go on adventures and make new friends you can read about when you view their page."%>
+          <p class="wild-explanation">When this box is checked a status update will be automatically posted by your cutie up to once a day. They may post a status, make a friend, or read a book from their favorite genre! When you visit their page, you can see what they've been up to while you weren't looking!</p>
+        </span>
 
         <%= f.submit "Edit #{@cutie.name}" %>
       </div>
